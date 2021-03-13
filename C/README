@@ -1,19 +1,27 @@
 *Text output reading "CHECK STATUS <function>:" conveys which function the output originates from
 
 
+These two programs operate using pipes.
+
+
 sendReply.c       
-        on running the program, the user will be asked to provide text input
+        On running the program, the program will fork into a Parent and Child.
+	The user will then be asked by the parent to provide text input.  This text input will be written to a pipe.
+	The child process will read this pipe and will respond via a different pipe to the Parent with the initial input text with "::REPLY" appended to the end of it.
                
-        all the printf outputs are color-coded for their respective funtion to help me with debugging.
+        All the printf outputs are color-coded for their respective funtion to help me with debugging.
         
-        when you enter an input (or not) and press enter, that input will be edited to have the string "::REPLY" appended to the back of it.
+        When you enter an input (or not) and press enter, that input will be edited to have the string "::REPLY" appended to the back of it.
         this is then sent into a different pipe as a signal to the parent function to send the next sting
         
-        when this edited string is recieved by the parent process, the process starts again.
+        When this edited string is recieved by the parent process, the process starts again.
 
         
         
 timeStamp.c
+	Much like with sendReply, this program forks into a Parent and Child and a text input will be sent to the the Child.  However, the text will have appended to it data involving the current time.
+	The program will then return the difference in time (milliseconds) between when the text was sent to the pipe, and when the reply was recieved by the Parent.
+
         On running the program, the user wil be prompted to provide an input
                 
         when you enter an input (or not) and press enter, that input will be edited to have the string ":" appended to the back of it (this helps with ease in tokenizeing the string).
