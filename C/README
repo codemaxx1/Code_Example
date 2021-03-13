@@ -1,0 +1,24 @@
+*Text output reading "CHECK STATUS <function>:" conveys which function the output originates from
+
+
+sendReply.c       
+        on running the program, the user will be asked to provide text input
+               
+        all the printf outputs are color-coded for their respective funtion to help me with debugging.
+        
+        when you enter an input (or not) and press enter, that input will be edited to have the string "::REPLY" appended to the back of it.
+        this is then sent into a different pipe as a signal to the parent function to send the next sting
+        
+        when this edited string is recieved by the parent process, the process starts again.
+
+        
+        
+timeStamp.c
+        On running the program, the user wil be prompted to provide an input
+                
+        when you enter an input (or not) and press enter, that input will be edited to have the string ":" appended to the back of it (this helps with ease in tokenizeing the string).
+        this is then sent into a different pipe as a signal to the parent function to send the next sting
+        
+        the text output will appear in various colours, with each color coinciding to a specific function.
+        
+        when this edited string is recieved by the parent process, the process starts again.
