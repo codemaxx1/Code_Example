@@ -1,0 +1,17 @@
+By Nick Garrett
+greatest common denominator calculator
+
+
+This program takes 2 user inputs and calcuates the greatest common demonimator of the two.
+It incorperates a function which ensures that a devision by zero error does not occur, this function doubles as a zero and negative number filter for user input, as both of these inputs cause errors in the system.  
+
+
+To use: run code, a prompt will ask for the first integer.  Please, no zero's, negatives, or decimals.  
+While there is an error checker for the first two, there is no system checking that the number entered is a whole number.
+After entering your integers, the program will determine the smallest of the two, and take a copy of the number checking if it is a devisor of both integers.  
+If it is, then that integer will be returned in an output to the user.  
+Otherwise, it will subtract one from that integer, and check it again.  
+Recursively operating until eventually, it returns an answer... or an error message. (preferably the prior)
+
+
+

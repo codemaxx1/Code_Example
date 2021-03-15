@@ -1,0 +1,5 @@
+flag.bash
+By Nick Garrett
+
+This is a simple script to print a string of integers to the user.  The integers spell-out a message that the CTFer (Capture the Flag-er) is tasked to find.
+I wrote this script while involved with a simple Capture The Flag camp where I was tasked to write this script for the CTFers to try to crack.
