@@ -1,0 +1,16 @@
+Terrandelle_Mk3[RPi].py
+By Nick Garrett
+Written in Python3
+
+This program is a virtual assistant designed to be run on a Raspberry Pi. (a small, single-board, ARM-processor, development board)
+On initializing the program, a GTTs (Google Text to Speech) generated voice will provide a brief explanation of the project--named Terrandelle. 
+By speaking the voice command "help", a small menu and explanation of various commands will be spoken by the system.
+
+Some functions of this program are: 
+                return (vocally) the current time, 
+                various responses and greetings dependant on the time of day, 
+                reading a newsfeed, 
+                send / check for emails,
+                connection to Wikipedia for definition and explanation of questions,
+                read the weather report for a city.
+                
