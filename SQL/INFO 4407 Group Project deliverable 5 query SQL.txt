@@ -1,0 +1,23 @@
+-- 9 T N
+-- 3/26/2021
+-- INSTRUCTIONS:  List the model number, description, and number of suppliers for those product categories that were supplied by multiple suppliers.
+
+-- initialize variables
+-- SET @supplierCount = 0;
+
+-- print the model number, description, and number of suppliers
+-- CREATE TABLE  IF NOT EXISTS intermediateTable
+
+-- data to output
+SELECT modelNum, modelDescription, supplierNum
+
+-- which tables to pull data from
+FROM productOrder, productCategory
+
+-- self explanatory
+GROUP BY modelDescription
+
+-- where there are multiple of the same “modelDescription”
+HAVING count(distinct(modelDescription)) > 1
+
+
