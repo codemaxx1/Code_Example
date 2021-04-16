@@ -1,0 +1,22 @@
+-- INSTRUCTIONS: List all orders that were placed over 1 month ago and have not been received. 
+--               Include order number, order date placed, order date received, supplier number, supplier name, supplier contact, and supplier phone. 
+--               List by order date placed from oldest to most recent. 
+--               INTERVAL is useful here.
+
+
+-- set a variable of type DATE named "oneMonthAgo" that is the currentdate (callded by CURDATE()) minus the interval of a month
+SET @oneMonthAgo = (CURRENT_DATE() - INTERVAL 1 Month);
+
+-- print the order number, order date placed, order date recieved, supplier number, supplier name, supplier contact, supplier phone
+SELECT productOrder.orderNum, productOrder.orderDatePlaced, productOrder.orderDateReceived, supplier.supplierNum, supplier.supplierName, supplier.supplierContact, supplier.supplierPhone
+FROM productOrder, supplier
+
+-- where the date the order was placed was over a month ago
+WHERE productOrder.orderDatePlaced < @oneMonthAgo
+-- when "looking" at the same supplier number
+AND productOrder.supplierNum = supplier.supplierNum
+-- when the order hasn't been recieved yet
+AND productOrder.orderDateReceived IS NULL
+
+-- order in scending order (oldest to newest) based on the date the order was placed
+ORDER BY productOrder.orderDatePlaced ASC;
