@@ -1,0 +1,14 @@
+Project6.bash
+
+This script is effectively an emulation of the "cp -r <source> <target>" terminal command. This is the recursive copy terminal command.
+
+The calling format for this script is "./Project6.bash <sourceDirectory> <targetDirectory>
+
+
+How it works:
+1) Call a recursive function which: 
+	1.a) Scans the source directory for all files and directories
+	1.b) When a file is found, it creates a similar file in the target directory 
+	1.c) When a directory is found, it creates a similar directory in the target directory and:
+	1.d) Recursively calls itself to the sub-directory
+
