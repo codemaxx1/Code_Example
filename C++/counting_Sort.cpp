@@ -78,24 +78,6 @@ void printArray(unsigned long* array, unsigned long arraySize)
 }
 
 
-//minMax function
-unsigned long* minMax(unsigned long* array, unsigned long size)
-{
-	unsigned long max = array[0];
-	unsigned long min = array[0];
-	
-	for(unsigned long x = 0; x < size; x++)
-	{
-		if(array[x] < min) min = array[x];
-		if(array[x] > max) max = array[x];
-	}
-
-	unsigned long minM[2] = {min, max};
-	//
-	return(minM);
-}
-
-
 // FooSort, sort an inputted array using the counting sort
 /*
 *	inputs:
@@ -148,16 +130,8 @@ void FooSort(unsigned long* unsortedArray, unsigned long* freqCountArray)
 				//iterate to overwrite the next term in the unsorted array
 				termToReWrite++;
 			}
-			
-		}
-
-		
+		}		
 	}
-	
-	//print the (now)sorted array
-	cout << "\nsorted aray: ";
-	//printArray(unsortedArray, arraySize);
-
 }
 
 
@@ -203,6 +177,10 @@ int main()
 	clock_t start = clock();	//start clock
 	FooSort(array, freqCount);
 	clock_t end = clock();	//end clock
+	
+	//print the (now)sorted array
+	cout << "\nsorted aray: ";
+	printArray(unsortedArray, arraySize);\
 	
 	cout << "speed: " << (double)(abs(start-end))/CLOCKS_PER_SEC << endl;
 	
