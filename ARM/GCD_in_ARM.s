@@ -11,7 +11,6 @@
 
 
 
-
 .data
 @	variable deffinitions
 var:	.word
@@ -64,15 +63,10 @@ main:
 	bl gcd
 
 
-
-
-
-
 	sub sp,fp,#16
 	pop {fp,pc}
 	.endfunc
 	
-
 
 .func gcd
 gcd:
@@ -211,13 +205,6 @@ end:
 
 
 
-
-
-
-
-
-
-
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @	experimental subtractive devision function	@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -256,9 +243,4 @@ div_init:
 	
 	bx lr
 	@.endfunc
-
-
-
-
-
 
