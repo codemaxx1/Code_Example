@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #       Nick Garrett
-#       Project6.bash
+#       emulate_cp_command.bash
 #       4/16/2021
 
 
@@ -109,8 +109,6 @@ for location in $(ls $1)
 
         done
 }
-
-
 
 
 
