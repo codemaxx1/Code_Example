@@ -1,0 +1,11 @@
+Created by Nicholas Garrett
+September 12, 2021
+
+
+Counting sort function in C++
+
+Create a zeroed-out array of unsigned longs with range and size defined at the top of the program (arrayRange and arraySize respectively). 
+On an array of maximum size 2^32-1 of unsigned long types, count the number of occurances for number n in the range of values and store them into a frequency count array.
+Then, iterate through the terms of the frequency count array, up to the term coinciding withthe maximum character appearing in the unsorted array range.
+Put the number of terms for each index in the frequency count array into the unsorted array.
+Now, the "unsorted" array should contain all the same values as it had before, though they are now sorted from min-max.
