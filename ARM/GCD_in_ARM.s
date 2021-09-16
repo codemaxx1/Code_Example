@@ -1,10 +1,5 @@
-@By Nick Garrett
+@By Nicholas Garrett
 @ greatest common denominator
-@
-@
-@	This re-submission incorperates a function which ensures that a devision by zero error does not occur, this function
-@	  doubles as a zero and negative number filter for user input, as both of these inputs cause errors in the system.  
-@
 @
 @ To use, run code, a prompt will ask for the first integer.  Please, no zero's, negatives, or decimals.  While there is an error checker
 @   for the first two, there is no system checking that the numberentered is a whole number.
@@ -13,8 +8,6 @@
 @      and check it again.  Recursively operating until eventually, it returns an answer, or an error message. (preferably the prior)
 @
 @
-
-
 
 
 
